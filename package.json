@@ -1,0 +1,11 @@
+{
+  "name": "loopback-swagger-json-fixer-service",
+  "version": "1.0.0",
+  "description":
+    "Fixes the swagger json created by lc loopback:export-api-def to be used by fascade loopback server",
+  "main": "index.js",
+  "repository": "https://github.com/jazzyarchitects/loopback-swagger-json-fixer-service.git",
+  "author": "Jibin Mathews <jibinmathews7@gmail.com> (http://www.jibinmathews.in)",
+  "license": "MIT",
+  "private": false
+}
