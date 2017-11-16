@@ -52,19 +52,11 @@ if (!['http', 'https'].includes(scheme)) {
 
 const originalContent = require(filePath);
 
-const { swagger, info, basePath, consumes, produces, definitions, tags, paths } = originalContent;
+const { paths } = originalContent;
 
-const fixedObject = {
-  swagger,
-  info,
-  basePath,
-  consumes,
-  produces,
-  definitions,
-  tags,
-  schemes: [scheme],
-  host,
-};
+const fixedObject = JSON.parse(JSON.stringify(originalContent));
+
+(fixedObject.schemes = [scheme]), (fixedObject.host = host);
 
 Object.keys(paths).forEach(_path => {
   const methods = Object.keys(paths[_path]);
